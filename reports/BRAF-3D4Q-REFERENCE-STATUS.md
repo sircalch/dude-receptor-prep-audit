@@ -10,6 +10,9 @@ The deposited 3D4Q mmCIF contains two SM5 ligand instances, each with 28
 non-hydrogen atoms: author chain A, residue 1, and author chain B, residue 1.
 Their coordinates and candidate padded boxes are reproducibly summarized in
 [`results/braf_3d4q_reference_metadata.csv`](../results/braf_3d4q_reference_metadata.csv).
+The frozen RCSB chemical-component definition agrees on 28 heavy atoms and
+documents the deposited neutral baseline; its auditable summary is
+[`results/braf_sm5_component_qualification.csv`](../results/braf_sm5_component_qualification.csv).
 
 ## What is deliberately not yet claimed
 
@@ -19,7 +22,8 @@ efficacy claims.  Consequently, no validation result exists yet.
 
 ## Next auditable action
 
-The next action is Gate 1 in the
+The next action is Gate 2 in the
 [qualification protocol](../protocol/BRAF-3D4Q-REFERENCE-LIGAND-QUALIFICATION.md):
-freeze and inspect the authoritative SM5 chemical-component definition.  Only
+extract one deposited SM5 instance and reconcile its atom identities against
+the frozen chemical-component definition. Only
 after the listed gates are complete may a reference-pose calculation be run.

@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.13'
       - name: Compile audit scripts
-        run: python -m py_compile scripts/fetch_dude_registry.py scripts/audit_dude_receptors.py scripts/render_audit_figures.py scripts/qualify_rcsb_element_mapping.py scripts/render_mapping_figure.py scripts/audit_rcsb_mmcif_preparation.py scripts/merge_rcsb_chunks.py scripts/render_mmcif_figure.py scripts/extract_braf_reference_metadata.py
+        run: python -m py_compile scripts/fetch_dude_registry.py scripts/audit_dude_receptors.py scripts/render_audit_figures.py scripts/qualify_rcsb_element_mapping.py scripts/render_mapping_figure.py scripts/audit_rcsb_mmcif_preparation.py scripts/merge_rcsb_chunks.py scripts/render_mmcif_figure.py scripts/extract_braf_reference_metadata.py scripts/qualify_braf_sm5_component.py
       - name: Validate table and regenerate deterministic figures
         run: |
           python scripts/render_audit_figures.py
@@ -30,4 +30,5 @@ jobs:
           test -s reports/figures/figure-3-authoritative-mapping.svg
           test -s reports/figures/figure-4-mmcif-compatibility.svg
           test -s results/braf_3d4q_reference_metadata.csv
+          test -s results/braf_sm5_component_qualification.csv
           git diff --exit-code -- reports/figures

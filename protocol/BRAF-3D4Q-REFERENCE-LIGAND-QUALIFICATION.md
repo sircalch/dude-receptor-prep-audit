@@ -38,13 +38,29 @@ The reported prospective boxes are the tight heavy-atom bounding boxes expanded
 by 5.0 Å in each direction.  They are candidate configuration values only, not
 an established docking protocol.
 
+## Completed Gate 1: chemical-component definition
+
+The authoritative RCSB Chemical Component Dictionary file for `SM5` was
+retrieved and frozen locally with SHA-256
+`7411b2201a400162e273111afc5a32d6a0ed657e62f55f8cf677c4d6f5e44b03`.
+`scripts/qualify_braf_sm5_component.py` reads that file without modification.
+It reports 51 atoms (28 heavy atoms), 55 bonds (46 single and 9 double),
+formula `C22 H23 N5 O`, formula weight 373.451, and formal charge 0 in
+[`results/braf_sm5_component_qualification.csv`](../results/braf_sm5_component_qualification.csv).
+
+For the *first reference-pose recovery only*, the deposited neutral component
+is frozen as the baseline chemical state. This is a reproducibility choice,
+not a statement that SM5 has one universally correct protonation state in a
+biological environment. Any pH-dependent alternative must be declared as a
+separate sensitivity branch before calculation.
+
 ## Gates before any reference-pose calculation
 
 All of the following must be recorded before running a docking engine:
 
-1. Retrieve the RCSB chemical-component definition for SM5 and record its
-   checksum, bond orders, formal charge, and explicitly chosen protonation
-   state.
+1. ~~Retrieve the RCSB chemical-component definition for SM5 and record its
+   checksum, bond orders, formal charge, and explicitly chosen baseline
+   state.~~ Completed as documented above.
 2. Extract one deposited ligand instance without changing its coordinates;
    record the output checksum and atom-identity reconciliation.
 3. Recreate the strict RCSB-mmCIF receptor preparation for the selected chain
