@@ -30,6 +30,8 @@ descriptive software-compatibility observations only.
 
 The completed strict audit and its versioned figures are in
 [reports/AUDIT-RESULTS.md](reports/AUDIT-RESULTS.md).
+The follow-up authoritative element-mapping qualification is documented in
+[reports/ELEMENT-MAPPING-RESULTS.md](reports/ELEMENT-MAPPING-RESULTS.md).
 
 ## Reproduction
 
