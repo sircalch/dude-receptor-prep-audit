@@ -27,10 +27,12 @@ def main() -> None:
     parser.add_argument("results_csv", type=Path)
     parser.add_argument("--meeko-command", required=True)
     parser.add_argument("--limit", type=int)
+    parser.add_argument("--start-index", type=int, default=0)
     parser.add_argument("--timeout-seconds", type=int, default=300)
     args = parser.parse_args()
     with args.registry_csv.open(newline="", encoding="utf-8") as handle: records = list(csv.DictReader(handle))
     if len(records) != 102: raise RuntimeError("The frozen registry must contain exactly 102 targets.")
+    records = records[args.start_index:]
     if args.limit is not None: records = records[:args.limit]
     rows = []
     for record in records:
