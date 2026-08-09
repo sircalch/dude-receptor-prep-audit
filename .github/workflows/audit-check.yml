@@ -1,0 +1,26 @@
+name: Audit evidence check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-results:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Compile audit scripts
+        run: python -m py_compile scripts/fetch_dude_registry.py scripts/audit_dude_receptors.py scripts/render_audit_figures.py
+      - name: Validate table and regenerate deterministic figures
+        run: python scripts/render_audit_figures.py
+      - name: Verify versioned evidence is current
+        run: |
+          test -s results/dude_receptor_audit.csv
+          test -s reports/figures/figure-1-audit-flow.svg
+          test -s reports/figures/figure-2-element-fields.svg
+          git diff --exit-code -- reports/figures

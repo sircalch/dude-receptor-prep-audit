@@ -26,6 +26,11 @@ The exact protocol is in
 [protocol/AUDIT-PROTOCOL.md](protocol/AUDIT-PROTOCOL.md). Results are
 descriptive software-compatibility observations only.
 
+## Results
+
+The completed strict audit and its versioned figures are in
+[reports/AUDIT-RESULTS.md](reports/AUDIT-RESULTS.md).
+
 ## Reproduction
 
 1. Freeze the target registry:
