@@ -54,6 +54,21 @@ not a statement that SM5 has one universally correct protonation state in a
 biological environment. Any pH-dependent alternative must be declared as a
 separate sensitivity branch before calculation.
 
+## Completed Gate 2: deposited-instance extraction and reconciliation
+
+The chain-A, residue-1 SM5 instance was extracted from the frozen 3D4Q mmCIF
+as a local coordinate CSV without coordinate modification or ligand
+preparation. Its SHA-256 is
+`467b2e36123cde75027866c2afa6a501a2f12712d86bc6758b71bc61f8b3310a`.
+The raw coordinate record remains ignored, as with other source coordinates in
+this repository. The tracked reconciliation summary is
+[`results/braf_sm5_chain_a_extraction.csv`](../results/braf_sm5_chain_a_extraction.csv).
+
+All 28 deposited atom identifiers appear in the component definition and all
+28 element symbols agree. The definition contains 23 additional hydrogen atom
+identifiers, which are absent from the deposited X-ray coordinate instance;
+this expected difference is recorded rather than filled in or inferred.
+
 ## Gates before any reference-pose calculation
 
 All of the following must be recorded before running a docking engine:
@@ -61,8 +76,9 @@ All of the following must be recorded before running a docking engine:
 1. ~~Retrieve the RCSB chemical-component definition for SM5 and record its
    checksum, bond orders, formal charge, and explicitly chosen baseline
    state.~~ Completed as documented above.
-2. Extract one deposited ligand instance without changing its coordinates;
-   record the output checksum and atom-identity reconciliation.
+2. ~~Extract one deposited ligand instance without changing its coordinates;
+   record the output checksum and atom-identity reconciliation.~~ Completed as
+   documented above.
 3. Recreate the strict RCSB-mmCIF receptor preparation for the selected chain
    and record the exact Meeko version, command, output checksum, and any
    receptor atoms retained or excluded by the tool.

@@ -13,6 +13,11 @@ Their coordinates and candidate padded boxes are reproducibly summarized in
 The frozen RCSB chemical-component definition agrees on 28 heavy atoms and
 documents the deposited neutral baseline; its auditable summary is
 [`results/braf_sm5_component_qualification.csv`](../results/braf_sm5_component_qualification.csv).
+The deposited chain-A coordinate record has also been extracted locally without
+modification: its 28 atom identities and elements reconcile exactly with the
+component definition, while the 23 definition hydrogens are correctly absent
+from the deposited X-ray instance. The checksums and counts are in
+[`results/braf_sm5_chain_a_extraction.csv`](../results/braf_sm5_chain_a_extraction.csv).
 
 ## What is deliberately not yet claimed
 
@@ -22,8 +27,7 @@ efficacy claims.  Consequently, no validation result exists yet.
 
 ## Next auditable action
 
-The next action is Gate 2 in the
+The next action is Gate 3 in the
 [qualification protocol](../protocol/BRAF-3D4Q-REFERENCE-LIGAND-QUALIFICATION.md):
-extract one deposited SM5 instance and reconcile its atom identities against
-the frozen chemical-component definition. Only
+recreate and characterize a receptor preparation for the selected chain. Only
 after the listed gates are complete may a reference-pose calculation be run.
