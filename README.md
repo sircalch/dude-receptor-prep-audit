@@ -34,6 +34,10 @@ The follow-up authoritative element-mapping qualification is documented in
 [reports/ELEMENT-MAPPING-RESULTS.md](reports/ELEMENT-MAPPING-RESULTS.md).
 The strict source-alternative mmCIF audit is in
 [reports/RCSB-MMCIF-PREPARATION-RESULTS.md](reports/RCSB-MMCIF-PREPARATION-RESULTS.md).
+The separate, pre-docking BRAF reference-ligand campaign is described in
+[protocol/BRAF-3D4Q-REFERENCE-LIGAND-QUALIFICATION.md](protocol/BRAF-3D4Q-REFERENCE-LIGAND-QUALIFICATION.md)
+and its current evidence boundary is in
+[reports/BRAF-3D4Q-REFERENCE-STATUS.md](reports/BRAF-3D4Q-REFERENCE-STATUS.md).
 
 ## Reproduction
 
