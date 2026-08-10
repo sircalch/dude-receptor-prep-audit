@@ -23,6 +23,8 @@ SHA-256 values:
 All 102 legacy-PDB files were downloaded. Strict direct preparation produced
 27 nonempty PDBQT outputs and 75 failures:
 
+![Strict preparation comparison](figures/figure-6-preparation-comparator.svg)
+
 | Outcome or recorded failure class | Count |
 |---|---:|
 | Direct success | 27 |
