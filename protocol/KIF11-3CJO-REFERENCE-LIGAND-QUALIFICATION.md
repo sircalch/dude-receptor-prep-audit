@@ -31,6 +31,15 @@ alternate locations. Meeko 0.7.1 completed strict preparation successfully.
 The exact command, warning-bearing log checksum, and source/output checksums
 are in [`results/kif11_chain_a_cofactor_receptor_preparation.csv`](../results/kif11_chain_a_cofactor_receptor_preparation.csv).
 
+## Completed component freeze
+
+The authoritative K30 definition has SHA-256
+`ffce02cf297fc7378ef997bee8ad390860e4e02cc7cc98d49915c3aafe51f7c1` and
+records 61 atoms, 33 heavy atoms, 64 bonds, and formal charge 0. The neutral
+deposited component is the reference baseline; it is not asserted to be the
+only state in every environment. See
+[`results/kif11_k30_component_qualification.csv`](../results/kif11_k30_component_qualification.csv).
+
 ## Planned gates
 
 1. Extract chain-A polymer atoms plus ADP and Mg²⁺; record every retained and
