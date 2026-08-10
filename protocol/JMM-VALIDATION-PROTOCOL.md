@@ -56,6 +56,29 @@ following conditions:
 
 The manuscript must never frame a comparator as an error-free gold standard.
 
+## Selected comparator: RCSB legacy-PDB direct route
+
+This comparator is selected before execution. It evaluates source-format and
+reader compatibility, not the superiority of one preparation suite.
+
+- Population: all 102 entries in `data/dude_targets.csv`; no eligibility
+  exclusion is permitted after outcome inspection.
+- Source: the official uncompressed RCSB legacy-PDB endpoint
+  `https://files.rcsb.org/download/{PDB_ID}.pdb`.
+- Retrieval record: for every attempted source, retain URL, UTC retrieval time,
+  HTTP status, byte count, and SHA-256. Downloaded coordinates remain ignored
+  external data and are not committed to this repository.
+- Preparation: one Meeko direct PDB-reader attempt using `--read_pdb`, with
+  the same Meeko environment and direct-success definition as the baseline.
+- Prohibited interventions: atom/element repair, coordinate editing,
+  alternate-location selection, residue-template addition, deletion, and
+  manual retry after viewing an individual result.
+- Output: retain every target-level row and command log. A missing/failed
+  download is reported as `not_evaluated`, never converted to success.
+
+This condition differs from both the original DUD-E PDB files and RCSB mmCIF
+files. Results must be presented as a separate source-and-reader condition.
+
 ## Outcome definitions
 
 ### Receptor preparation
