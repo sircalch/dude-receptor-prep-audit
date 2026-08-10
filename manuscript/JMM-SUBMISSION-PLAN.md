@@ -23,6 +23,7 @@ submission manuscript and must not be uploaded to a journal system.
 | BRAF reference-pose recovery | 3D4Q/SM5; 9 Vina poses; top-score RMSD 1.134 A; lowest RMSD 1.083 A | `results/reference_pose_recovery_panel.csv` |
 | KIF11 reference-pose recovery | 3CJO/K30; 9 Vina poses; top-score RMSD 1.477 A; lowest RMSD 1.316 A | `results/reference_pose_recovery_panel.csv` |
 | Frozen release | v0.2.0, DOI 10.5281/zenodo.21866318 | Zenodo and GitHub release |
+| Independent direct DUD-E reproduction | 102 rows; byte-identical to the frozen audit CSV | `reports/INDEPENDENT-DUDE-REPRODUCTION-2026-08-09.md` |
 
 All reported values are computational observations. They do not establish
 binding affinity, biological activity, safety, or therapeutic effect.
