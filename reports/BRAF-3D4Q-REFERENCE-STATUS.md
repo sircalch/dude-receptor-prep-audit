@@ -37,6 +37,12 @@ RMSD observed was 1.083 Å for model 3. No pass/fail threshold was declared in
 advance, so these are numerical observations rather than a binary validation
 claim.
 
+![All nine predeclared reference poses, without selection](figures/figure-5-braf-sm5-pose-recovery.svg)
+
+Figure 5 retains all nine poses. Mode 1 had the best Vina score; mode 3 had the
+lowest identity-mapped RMSD. These criteria are distinct and neither is an
+experimental measure of biological effect.
+
 There are no library screens, ranking results beyond this reference ligand,
 experimental affinity estimates, or cancer-related efficacy claims.
 
