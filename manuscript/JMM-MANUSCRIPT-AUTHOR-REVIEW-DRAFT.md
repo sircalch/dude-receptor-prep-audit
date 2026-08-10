@@ -7,10 +7,6 @@
 <sup>3</sup> Doctorado en Ciencia de Materiales, Universidad de Sonora, Hermosillo, Sonora, Mexico. ORCID: 0009-0003-7872-4965  
 *Corresponding author: andres.monreal@ues.mx
 
-**Article type proposed:** Software Report
-
-**Author-review status:** Editorial source draft. The authors must perform a final scientific and language review before submission.
-
 ## Abstract
 
 **Context:** Molecular-docking workflows can become difficult to evaluate when coordinate provenance, receptor-preparation choices, and pose-selection rules are not retained. This work presents a provenance-aware workflow for recording strict receptor-preparation outcomes and bounded reference-pose recovery. The workflow evaluated 102 DUD-E receptor entries. Direct preparation of the original DUD-E PDB representation failed for all 102 entries because blank element fields were recorded. In separate official RCSB conditions, strict preparation produced 26/102 successes from mmCIF and 27/102 successes from legacy PDB. The two RCSB conditions agreed for 101 target-level outcomes; the only difference was DPP4/2I78, a timeout in the frozen mmCIF audit that completed in subsequent executions. Reference-pose campaigns retained all nine Vina poses for BRAF 3D4Q/SM5 and KIF11 3CJO/K30. The top-score and lowest-RMSD values were reported separately.
@@ -94,27 +90,9 @@ This software workflow preserves strict receptor-preparation outcomes, provenanc
 
 ## Figure captions
 
-**Fig. 1** Strict receptor-preparation outcomes across original DUD-E PDB, official RCSB mmCIF, and official RCSB legacy-PDB conditions. Bars show direct successes out of 102 entries. The RCSB conditions agreed for 101 target-level outcomes; DPP4/2I78 differed by a frozen timeout versus a later success.
+**Fig. 1** Strict receptor-preparation outcomes across original DUD-E PDB, official RCSB mmCIF, and official RCSB legacy-PDB conditions. Bars show direct successes out of 102 entries. The RCSB conditions agreed for 101 target-level outcomes; DPP4/2I78 differed by a frozen timeout versus a later success
 
-**Fig. 2** Reference-pose recovery panel for BRAF 3D4Q/SM5 and KIF11 3CJO/K30. All nine Vina poses per case were retained. Top-score and lowest-RMSD poses are reported under separate rules.
-
-## Statements and declarations
-
-### Funding
-
-The authors declare that no funds, grants, or other support were received during the preparation of this manuscript. The work used available local computing resources.
-
-### Competing interests
-
-The authors have no relevant financial or non-financial interests to disclose.
-
-### Author contributions
-
-Sara Lizbeth Franco Amaya: Conceptualization; Writing - review and editing. Carlos Ivanhoe Martínez Osorio: Methodology. Andrés Monreal Hernández: Data curation; Formal analysis; Investigation; Software; Visualization; Writing - original draft. All authors reviewed the evidence, contributed to manuscript review, and must approve the final submitted version.
-
-### Data availability
-
-Versioned code, derived non-coordinate result tables, protocols, validation artefacts, and deterministic figures are available from the public project repository. The frozen v0.2.0 evidence archive is available at https://doi.org/10.5281/zenodo.21866318. A new persistent archive containing the comparator and manuscript-source version must be created before submission. Original coordinates and local PDBQT/log files are not redistributed; source identifiers, URLs, and checksums are provided to support retrieval and verification.
+**Fig. 2** Reference-pose recovery panel for BRAF 3D4Q/SM5 and KIF11 3CJO/K30. All nine Vina poses per case were retained. Top-score and lowest-RMSD poses are reported under separate rules
 
 ## References
 
@@ -133,3 +111,21 @@ Versioned code, derived non-coordinate result tables, protocols, validation arte
 13. Ramírez D, Caballero J (2018) Is It Reliable to Take the Molecular Docking Top Scoring Position as the Best Solution without Considering Available Structural Data? Molecules 23:1038. https://doi.org/10.3390/molecules23051038
 14. Allen WJ, Rizzo RC (2014) Implementation of the Hungarian algorithm to account for ligand symmetry and similarity in structure-based design. J Chem Inf Model 54:518-529. https://doi.org/10.1021/ci400534h
 15. Stanzione F, Giangreco I, Cole JC (2021) Use of molecular docking computational tools in drug discovery. Prog Med Chem 60:273-343. https://doi.org/10.1016/bs.pmch.2021.01.004
+
+## Statements and declarations
+
+### Funding
+
+The authors declare that no funds, grants, or other support were received during the preparation of this manuscript. The work used available local computing resources.
+
+### Competing interests
+
+The authors have no relevant financial or non-financial interests to disclose.
+
+### Author contributions
+
+Sara Lizbeth Franco Amaya: Conceptualization; Writing - review and editing. Carlos Ivanhoe Martínez Osorio: Methodology. Andrés Monreal Hernández: Data curation; Formal analysis; Investigation; Software; Visualization; Writing - original draft. All authors reviewed the evidence, contributed to manuscript review, and must approve the final submitted version.
+
+### Data availability
+
+Versioned code, derived non-coordinate result tables, protocols, validation artefacts, and deterministic figures are available from the public project repository. The frozen v0.2.0 evidence archive is available at https://doi.org/10.5281/zenodo.21866318. A new persistent archive containing the comparator and manuscript-source version must be created before submission. Original coordinates and local PDBQT/log files are not redistributed; source identifiers, URLs, and checksums are provided to support retrieval and verification.

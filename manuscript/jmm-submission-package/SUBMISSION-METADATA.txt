@@ -1,0 +1,25 @@
+ARTICLE TYPE
+Software Report
+
+TITLE
+A provenance-aware workflow for strict receptor-preparation audits and reference-pose recovery in molecular docking
+
+RUNNING TITLE
+Provenance-aware receptor-preparation audits for docking
+
+KEYWORDS
+molecular docking; receptor preparation; reproducibility; provenance; Meeko; AutoDock Vina
+
+AUTHORS
+Andrés Monreal Hernández | Universidad Estatal de Sonora, Hermosillo, Sonora, Mexico | ORCID 0009-0009-1207-8597 | corresponding author | andres.monreal@ues.mx
+Sara Lizbeth Franco Amaya | Doctorado en Nanotecnología, Universidad de Sonora, Hermosillo, Sonora, Mexico | ORCID 0009-0005-0272-0241
+Carlos Ivanhoe Martínez Osorio | Doctorado en Ciencia de Materiales, Universidad de Sonora, Hermosillo, Sonora, Mexico | ORCID 0009-0003-7872-4965 | a223230105@unison.mx
+
+PUBLIC REPOSITORY
+https://github.com/sircalch/dude-receptor-prep-audit
+
+FROZEN BASELINE ARCHIVE
+https://doi.org/10.5281/zenodo.21866318
+
+REQUIRED UPDATE BEFORE SUBMISSION
+Create the new versioned archive containing comparator and manuscript-source material, then replace the manuscript placeholder sentence with its persistent DOI or URL.

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import argparse
 from pathlib import Path
 
 from docx import Document
@@ -92,7 +93,7 @@ def add_table(doc, cells):
     doc.add_paragraph()
 
 
-def main():
+def main(output: Path = OUTPUT):
     doc = Document()
     section = doc.sections[0]
     section.top_margin = Inches(1)
@@ -164,15 +165,14 @@ def main():
             set_font(run, size=10)
         index += 1
 
-    note = doc.add_paragraph()
-    note.paragraph_format.space_before = Pt(8)
-    run = note.add_run("Figure files for separate upload: reports/figures/figure-6-preparation-comparator.svg and reports/figures/figure-7-reference-pose-panel.svg.")
-    set_font(run, size=9)
     doc.core_properties.title = "A provenance-aware workflow for strict receptor-preparation audits and reference-pose recovery in molecular docking"
     doc.core_properties.author = "Andrés Monreal Hernández; Sara Lizbeth Franco Amaya; Carlos Ivanhoe Martínez Osorio"
-    doc.save(OUTPUT)
-    print(OUTPUT)
+    doc.save(output)
+    print(output)
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path, default=OUTPUT)
+    args = parser.parse_args()
+    main(args.output)

@@ -1,0 +1,6 @@
+1. Upload JMM-Manuscript.docx as the editable manuscript text; it already contains Figs. 1 and 2 in the body.
+2. Retain Fig1.eps and Fig2.eps as the preferred vector figure files. Upload them separately only if the portal requests figure files or the manuscript file is too large.
+3. Upload OnlineResource1_ReproducibilityArtefacts.zip only if supplementary information is selected in the portal.
+4. Paste or adapt COVER-LETTER-DRAFT.txt if the portal requests a cover letter.
+5. Enter the title, author names, affiliations, ORCIDs, keywords, funding, competing-interest statement, author contributions, and data-availability statement from SUBMISSION-METADATA.txt.
+6. Before final submission, create the new archive, update the DOI/URL in the manuscript, rebuild this package, and verify the generated portal PDF.

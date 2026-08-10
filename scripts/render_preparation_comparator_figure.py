@@ -25,26 +25,21 @@ def main() -> None:
     labels = ["Original DUD-E PDB", "RCSB mmCIF", "RCSB legacy PDB"]
     colors = ["#dc2626", "#2563eb", "#16a34a"]
     positions = [185, 495, 805]
-    baseline, top, scale = 400, 145, 2.8
+    baseline, scale = 300, 5
     body = [
-        '<text x="45" y="52" style="font:700 27px Arial;fill:#172033">Strict receptor-preparation outcomes by source and reader condition</text>',
-        '<line x1="105" y1="400" x2="1030" y2="400" stroke="#334155" stroke-width="2"/>',
+        '<line x1="105" y1="300" x2="1030" y2="300" stroke="#334155" stroke-width="2"/>',
     ]
     for x, label, value, color in zip(positions, labels, values, colors):
         height = round(value * scale)
         body.extend([
             f'<rect x="{x}" y="{baseline-height}" width="170" height="{height}" fill="{color}"/>',
             f'<text x="{x+85}" y="{baseline-height-15}" text-anchor="middle" style="font:700 26px Arial;fill:#172033">{value}/102</text>',
-            f'<text x="{x+85}" y="435" text-anchor="middle" style="font:17px Arial;fill:#172033">{label}</text>',
+            f'<text x="{x+85}" y="335" text-anchor="middle" style="font:17px Arial;fill:#172033">{label}</text>',
             '<text x="0" y="0" style="display:none">strict direct Meeko preparation</text>',
         ])
-    body.extend([
-        '<text x="45" y="495" style="font:15px Arial;fill:#172033">RCSB mmCIF and legacy-PDB conditions agreed for 101/102 targets; DPP4/2I78 differed by timeout versus success.</text>',
-        '<text x="45" y="530" style="font:14px Arial;fill:#172033">Compatibility observations only: no receptor-quality, docking-score, affinity, activity, or therapeutic claim.</text>',
-    ])
     target = Path("reports/figures/figure-6-preparation-comparator.svg")
     target.write_text(
-        '<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560"><rect width="100%" height="100%" fill="#fff"/>'
+        '<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="400" viewBox="0 0 1100 400"><rect width="100%" height="100%" fill="#fff"/>'
         + "".join(body) + "</svg>\n",
         encoding="utf-8",
     )

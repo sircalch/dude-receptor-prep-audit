@@ -1,0 +1,14 @@
+Dear Editor,
+
+Please consider our manuscript, “A provenance-aware workflow for strict receptor-preparation audits and reference-pose recovery in molecular docking,” for publication as a Software Report in Journal of Molecular Modeling.
+
+The manuscript reports a provenance-aware, strict receptor-preparation workflow for molecular docking. It preserves and classifies failures rather than silently repairing inputs, compares direct preparation outcomes across original DUD-E PDB, RCSB mmCIF, and RCSB legacy-PDB conditions for 102 entries, and documents two bounded reference-pose recovery cases with retained configurations and all generated poses. The work is intended as reproducibility-oriented computational infrastructure; it does not claim biological activity, therapeutic effect, or experimental validation.
+
+The accompanying files provide editable manuscript source, vector figure derivatives, and a supplementary archive containing non-coordinate derived data, protocols, and verification scripts. A versioned public archive for the comparator and manuscript-source state will be created and its persistent link inserted before submission.
+
+Before pressing Submit, the corresponding author must confirm in the portal that the manuscript is original, is not under consideration elsewhere, and has been approved by all authors and relevant institutions.
+
+Sincerely,
+Andrés Monreal Hernández
+Corresponding author
+andres.monreal@ues.mx
