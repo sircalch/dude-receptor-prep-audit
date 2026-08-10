@@ -41,4 +41,5 @@ jobs:
           test -s results/braf_sm5_reference_run.csv
           test -s reports/figures/figure-5-braf-sm5-pose-recovery.svg
           test -s results/kif11_3cjo_candidate_preflight.csv
+          test -s results/kif11_chain_a_cofactor_receptor_preparation.csv
           git diff --exit-code -- reports/figures

@@ -41,6 +41,8 @@ and its current evidence boundary is in
 The next KIF11 candidate is documented separately as a stopped preflight,
 pending an explicit cofactor policy, in
 [protocol/KIF11-3CJO-CANDIDATE-PREFLIGHT.md](protocol/KIF11-3CJO-CANDIDATE-PREFLIGHT.md).
+The selected KIF11 cofactor-retaining reference protocol is in
+[protocol/KIF11-3CJO-REFERENCE-LIGAND-QUALIFICATION.md](protocol/KIF11-3CJO-REFERENCE-LIGAND-QUALIFICATION.md).
 
 ## Reproduction
 
