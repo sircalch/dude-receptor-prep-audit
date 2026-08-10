@@ -22,6 +22,11 @@ The matching BRAF chain-A receptor was prepared successfully under the strict
 Meeko pathway; the selection rule, exclusions, command, version, outputs, and
 checksums are in
 [`results/braf_chain_a_receptor_preparation.csv`](../results/braf_chain_a_receptor_preparation.csv).
+The engine, binary hash, seed, search parameters, and fixed box have been
+predeclared in
+[`protocol/braf_3d4q_vina_reference.conf`](../protocol/braf_3d4q_vina_reference.conf)
+and summarized in
+[`results/braf_3d4q_vina_reference_configuration.csv`](../results/braf_3d4q_vina_reference_configuration.csv).
 
 ## What is deliberately not yet claimed
 
@@ -31,7 +36,7 @@ efficacy claims.  Consequently, no validation result exists yet.
 
 ## Next auditable action
 
-The next action is Gate 4 in the
+The next action is Gate 5 in the
 [qualification protocol](../protocol/BRAF-3D4Q-REFERENCE-LIGAND-QUALIFICATION.md):
-freeze the docking engine and all calculation settings before a single run. Only
+prepare the frozen SM5 baseline and run the one predeclared recovery calculation. Only
 after the listed gates are complete may a reference-pose calculation be run.

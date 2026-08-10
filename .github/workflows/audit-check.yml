@@ -33,4 +33,6 @@ jobs:
           test -s results/braf_sm5_component_qualification.csv
           test -s results/braf_sm5_chain_a_extraction.csv
           test -s results/braf_chain_a_receptor_preparation.csv
+          test -s protocol/braf_3d4q_vina_reference.conf
+          test -s results/braf_3d4q_vina_reference_configuration.csv
           git diff --exit-code -- reports/figures

@@ -85,6 +85,19 @@ the exact command; and counts are in
 [`results/braf_chain_a_receptor_preparation.csv`](../results/braf_chain_a_receptor_preparation.csv).
 The coordinate and PDBQT artifacts remain local and ignored.
 
+## Completed Gate 4: frozen calculation configuration
+
+The sole planned calculation is SM5 reference-pose recovery with AutoDock Vina
+1.2.7 (binary SHA-256
+`e0c4b2715e0c1a74f6e92d0f3be0328ac97542eafbc111e6b1efad897a73cce5`).
+The versioned [Vina configuration](braf_3d4q_vina_reference.conf) fixes the
+scoring function (`vina`), CPU count (1), seed (20260809), exhaustiveness
+(16), number of modes (9), minimum inter-pose RMSD (1.0 Å), energy range
+(3.0 kcal/mol), and the predeclared ligand-derived box. The matching flat
+record is [`results/braf_3d4q_vina_reference_configuration.csv`](../results/braf_3d4q_vina_reference_configuration.csv).
+
+This configuration is an execution plan only. No Vina command has been run.
+
 ## Gates before any reference-pose calculation
 
 All of the following must be recorded before running a docking engine:
@@ -99,9 +112,11 @@ All of the following must be recorded before running a docking engine:
    and record the exact Meeko version, command, output checksum, and any
    receptor atoms retained or excluded by the tool.~~ Completed as documented
    above.
-4. Freeze a docking engine/version, seed, exhaustiveness, energy range, number
-   of modes, box, and RMSD comparison rule before execution.
-5. Run only SM5 against its matched receptor first.  Report pose recovery as
+4. ~~Freeze a docking engine/version, seed, exhaustiveness, energy range,
+   number of modes, box, and RMSD comparison rule before execution.~~ Completed
+   as documented above.
+5. Prepare only SM5 from the frozen component baseline, run it against its
+   matched receptor, and report pose recovery as
    heavy-atom RMSD after a declared atom mapping, with all poses and failures
    retained.  A successful recovery would validate only this narrow
    computational setup, not affinity or biological activity.
