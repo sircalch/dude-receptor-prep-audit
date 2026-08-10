@@ -25,15 +25,17 @@ submission manuscript and must not be uploaded to a journal system.
 | Frozen release | v0.2.0, DOI 10.5281/zenodo.21866318 | Zenodo and GitHub release |
 | Independent direct DUD-E reproduction | 102 rows; byte-identical to the frozen audit CSV | `reports/INDEPENDENT-DUDE-REPRODUCTION-2026-08-09.md` |
 | Independent mmCIF reproduction | 101 of 102 rows agree; 2I78 changed from a 300-second timeout to a direct success | `reports/INDEPENDENT-MMCIF-REPRODUCTION-2026-08-09.md` |
+| 2I78 timing follow-up | Three predeclared attempts all succeeded in 147.002–160.443 s and yielded byte-identical PDBQT files | `reports/DPP4-2I78-TIMING-SENSITIVITY-2026-08-09.md` |
 
 All reported values are computational observations. They do not establish
 binding affinity, biological activity, safety, or therapeutic effect.
 
 ## Required validation before drafting the final paper
 
-1. Investigate the observed timing/resource sensitivity of 2I78 with a
-   predeclared runtime-measurement protocol. Preserve the frozen v0.2.0 table;
-   a non-identical rerun is a reported result, not a reason to overwrite it.
+1. Completed: investigate the observed timing/resource sensitivity of 2I78
+   with a predeclared runtime-measurement protocol. Preserve the frozen v0.2.0
+   table; a non-identical rerun is a reported result, not a reason to
+   overwrite it.
 2. Define one or more legitimate comparator preparation workflows and document
    their exact versions, commands, inputs, exclusions, and output criteria.
    No comparison may be introduced merely to improve a result.
