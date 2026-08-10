@@ -38,6 +38,9 @@ The separate, pre-docking BRAF reference-ligand campaign is described in
 [protocol/BRAF-3D4Q-REFERENCE-LIGAND-QUALIFICATION.md](protocol/BRAF-3D4Q-REFERENCE-LIGAND-QUALIFICATION.md)
 and its current evidence boundary is in
 [reports/BRAF-3D4Q-REFERENCE-STATUS.md](reports/BRAF-3D4Q-REFERENCE-STATUS.md).
+The next KIF11 candidate is documented separately as a stopped preflight,
+pending an explicit cofactor policy, in
+[protocol/KIF11-3CJO-CANDIDATE-PREFLIGHT.md](protocol/KIF11-3CJO-CANDIDATE-PREFLIGHT.md).
 
 ## Reproduction
 
