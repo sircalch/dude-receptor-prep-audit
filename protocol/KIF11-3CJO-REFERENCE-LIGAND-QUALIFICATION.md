@@ -40,6 +40,14 @@ deposited component is the reference baseline; it is not asserted to be the
 only state in every environment. See
 [`results/kif11_k30_component_qualification.csv`](../results/kif11_k30_component_qualification.csv).
 
+## Completed Gate 2: K30-A deposited-instance reconciliation
+
+The chain-A K30 instance was extracted locally without coordinate modification.
+All 33 deposited atom identifiers and element symbols match the K30 component;
+the 28 component atoms absent from the X-ray instance are hydrogens. The
+coordinate-record checksum and full counts are in
+[`results/kif11_k30_chain_a_extraction.csv`](../results/kif11_k30_chain_a_extraction.csv).
+
 ## Planned gates
 
 1. Extract chain-A polymer atoms plus ADP and Mg²⁺; record every retained and
