@@ -58,7 +58,22 @@ one CPU, seed 20260809, exhaustiveness 16, and a K30-A-derived box. Its inputs
 and configuration are summarized in
 [`results/kif11_k30_ligand_preparation.csv`](../results/kif11_k30_ligand_preparation.csv)
 and [`results/kif11_3cjo_vina_reference_configuration.csv`](../results/kif11_3cjo_vina_reference_configuration.csv).
-No Vina command has been run under this configuration.
+At the time this configuration was frozen, no Vina command had been run.
+
+## Completed Gate 4: single K30 reference-pose recovery
+
+One AutoDock Vina run completed under the frozen configuration and produced
+nine poses. All used the 33 identity-mapped heavy atoms. The top-scoring pose
+was −10.994 kcal/mol with aligned heavy-atom RMSD 1.477 Å to deposited K30-A;
+the lowest RMSD was 1.316 Å (mode 4, −9.838 kcal/mol). The complete pose table
+is [`results/kif11_k30_reference_pose_recovery.csv`](../results/kif11_k30_reference_pose_recovery.csv).
+The local Vina output SHA-256 is
+`18e477407958971ef560508ead158b6b6b2c67c835d2ed6c69cee823e0789b46`.
+
+No binary RMSD criterion was specified in advance. These are numerical
+pose-recovery observations only. The ADP automatic-template limitation remains
+part of this model, and neither Vina scores nor pose recovery establish
+experimental affinity, selectivity, activity, safety, or cancer-related effect.
 
 ## Planned gates
 

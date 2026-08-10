@@ -42,4 +42,9 @@ jobs:
           test -s reports/figures/figure-5-braf-sm5-pose-recovery.svg
           test -s results/kif11_3cjo_candidate_preflight.csv
           test -s results/kif11_chain_a_cofactor_receptor_preparation.csv
+          test -s results/kif11_k30_component_qualification.csv
+          test -s results/kif11_k30_chain_a_extraction.csv
+          test -s results/kif11_k30_ligand_preparation.csv
+          test -s results/kif11_3cjo_vina_reference_configuration.csv
+          test -s results/kif11_k30_reference_pose_recovery.csv
           git diff --exit-code -- reports/figures
