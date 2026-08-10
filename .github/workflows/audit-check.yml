@@ -15,13 +15,14 @@ jobs:
         with:
           python-version: '3.13'
       - name: Compile audit scripts
-        run: python -m py_compile scripts/fetch_dude_registry.py scripts/audit_dude_receptors.py scripts/render_audit_figures.py scripts/qualify_rcsb_element_mapping.py scripts/render_mapping_figure.py scripts/audit_rcsb_mmcif_preparation.py scripts/merge_rcsb_chunks.py scripts/render_mmcif_figure.py scripts/extract_braf_reference_metadata.py scripts/qualify_braf_sm5_component.py scripts/extract_braf_sm5_reference_instance.py scripts/prepare_braf_chain_a_receptor.py scripts/prepare_braf_sm5_reference_ligand.py scripts/analyze_braf_sm5_pose_recovery.py scripts/summarize_braf_sm5_reference_run.py scripts/render_braf_pose_recovery_figure.py scripts/qualify_kif11_3cjo_candidate.py
+        run: python -m py_compile scripts/*.py
       - name: Validate table and regenerate deterministic figures
         run: |
           python scripts/render_audit_figures.py
           python scripts/render_mapping_figure.py
           python scripts/render_mmcif_figure.py
           python scripts/render_braf_pose_recovery_figure.py
+          python scripts/build_reference_pose_recovery_panel.py
       - name: Verify versioned evidence is current
         run: |
           test -s results/dude_receptor_audit.csv
@@ -47,4 +48,5 @@ jobs:
           test -s results/kif11_k30_ligand_preparation.csv
           test -s results/kif11_3cjo_vina_reference_configuration.csv
           test -s results/kif11_k30_reference_pose_recovery.csv
-          git diff --exit-code -- reports/figures
+          test -s results/reference_pose_recovery_panel.csv
+          git diff --exit-code -- reports/figures results/reference_pose_recovery_panel.csv

@@ -1,0 +1,3 @@
+target,pdb_id,reference_ligand,cofactor_policy,meeko_receptor_outcome,meeko_ligand_outcome,vina_pose_count,best_scoring_model,best_scoring_affinity_kcal_per_mol,best_scoring_model_rmsd_angstrom,lowest_rmsd_model,lowest_rmsd_angstrom,material_limitation
+BRAF,3D4Q,SM5,polymer chain A only; non-polymers excluded,direct_success,direct_success,9,1,-10.929,1.134,3,1.083,no binary RMSD criterion predeclared
+KIF11,3CJO,K30,polymer chain A plus ADP and Mg; K30 and waters excluded,direct_success,direct_success,9,1,-10.994,1.477,4,1.316,ADP template constructed automatically by Meeko and accepted explicitly

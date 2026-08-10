@@ -43,6 +43,8 @@ pending an explicit cofactor policy, in
 [protocol/KIF11-3CJO-CANDIDATE-PREFLIGHT.md](protocol/KIF11-3CJO-CANDIDATE-PREFLIGHT.md).
 The selected KIF11 cofactor-retaining reference protocol is in
 [protocol/KIF11-3CJO-REFERENCE-LIGAND-QUALIFICATION.md](protocol/KIF11-3CJO-REFERENCE-LIGAND-QUALIFICATION.md).
+The completed two-target comparison is in
+[reports/REFERENCE-POSE-RECOVERY-PANEL.md](reports/REFERENCE-POSE-RECOVERY-PANEL.md).
 
 ## Reproduction
 
