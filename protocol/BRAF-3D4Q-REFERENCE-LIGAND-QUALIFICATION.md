@@ -69,6 +69,22 @@ All 28 deposited atom identifiers appear in the component definition and all
 identifiers, which are absent from the deposited X-ray coordinate instance;
 this expected difference is recorded rather than filled in or inferred.
 
+## Completed Gate 3: matched receptor preparation
+
+The receptor input is the polymer portion of author chain A only, which matches
+the selected SM5-A instance. The deterministic selection retained 264 polymer
+residues and 2,107 atoms; it excluded 10 non-polymer residues (37 atoms,
+including SM5 and waters). No polymer atom was deleted, and no alternate
+location was present among selected atoms.
+
+Meeko 0.7.1 was invoked with `--read_pdb` and `--write_pdbqt` only: no
+`--allow_bad_res`, alternate-location choice, template override, residue
+deletion, or repair option was supplied. It returned success and produced a
+209,142-byte local PDBQT. The source, selected-PDB, PDBQT, and log checksums;
+the exact command; and counts are in
+[`results/braf_chain_a_receptor_preparation.csv`](../results/braf_chain_a_receptor_preparation.csv).
+The coordinate and PDBQT artifacts remain local and ignored.
+
 ## Gates before any reference-pose calculation
 
 All of the following must be recorded before running a docking engine:
@@ -79,9 +95,10 @@ All of the following must be recorded before running a docking engine:
 2. ~~Extract one deposited ligand instance without changing its coordinates;
    record the output checksum and atom-identity reconciliation.~~ Completed as
    documented above.
-3. Recreate the strict RCSB-mmCIF receptor preparation for the selected chain
+3. ~~Recreate the strict RCSB-mmCIF receptor preparation for the selected chain
    and record the exact Meeko version, command, output checksum, and any
-   receptor atoms retained or excluded by the tool.
+   receptor atoms retained or excluded by the tool.~~ Completed as documented
+   above.
 4. Freeze a docking engine/version, seed, exhaustiveness, energy range, number
    of modes, box, and RMSD comparison rule before execution.
 5. Run only SM5 against its matched receptor first.  Report pose recovery as
