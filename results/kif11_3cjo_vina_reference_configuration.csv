@@ -1,0 +1,2 @@
+engine,engine_version,engine_binary_sha256,scoring,cpu,seed,exhaustiveness,num_modes,min_rmsd_angstrom,energy_range_kcal_per_mol,center_x,center_y,center_z,size_x,size_y,size_z,coordinate_source
+AutoDock Vina,1.2.7,e0c4b2715e0c1a74f6e92d0f3be0328ac97542eafbc111e6b1efad897a73cce5,vina,1,20260809,16,9,1.0,3.0,17.618,17.093,109.312,19.934,19.502,19.107,K30 chain-A deposited heavy-atom bounds plus 5.0 A padding per face

@@ -48,6 +48,18 @@ the 28 component atoms absent from the X-ray instance are hydrogens. The
 coordinate-record checksum and full counts are in
 [`results/kif11_k30_chain_a_extraction.csv`](../results/kif11_k30_chain_a_extraction.csv).
 
+## Completed Gate 3: frozen K30 input and Vina configuration
+
+K30 was prepared from its frozen ideal SDF with Meeko 0.7.1, Gasteiger charges,
+and an index map. Its PDBQT checksum is
+`548f60e97921876513590a6c01802f0c4a09f91a0752a93aae779c2dd5eb8c5b`.
+The fixed [Vina configuration](kif11_3cjo_vina_reference.conf) uses Vina 1.2.7,
+one CPU, seed 20260809, exhaustiveness 16, and a K30-A-derived box. Its inputs
+and configuration are summarized in
+[`results/kif11_k30_ligand_preparation.csv`](../results/kif11_k30_ligand_preparation.csv)
+and [`results/kif11_3cjo_vina_reference_configuration.csv`](../results/kif11_3cjo_vina_reference_configuration.csv).
+No Vina command has been run under this configuration.
+
 ## Planned gates
 
 1. Extract chain-A polymer atoms plus ADP and Mg²⁺; record every retained and
