@@ -156,6 +156,11 @@ def main() -> int:
         default=Path(__file__).resolve().parents[1] / "results",
         help="directory holding the versioned CSV evidence",
     )
+    parser.add_argument(
+        "--compare-mmcif-reproduction",
+        type=Path,
+        help="optional independently reproduced mmCIF CSV that must match exactly",
+    )
     args = parser.parse_args()
     results_dir = args.results_dir.resolve()
     try:
@@ -166,6 +171,10 @@ def main() -> int:
             validate_mmcif(read_csv(mmcif)),
             validate_reference_panel(results_dir),
         ]
+        if args.compare_mmcif_reproduction is not None:
+            reproduced = args.compare_mmcif_reproduction.resolve()
+            require(reproduced.read_bytes() == mmcif.read_bytes(), "mmCIF reproduction differs from the frozen CSV")
+            messages.append("mmCIF reproduction: byte-identical to the frozen audit CSV")
     except (OSError, KeyError, ValueError) as error:
         print(f"Evidence verification failed: {error}", file=sys.stderr)
         return 1
