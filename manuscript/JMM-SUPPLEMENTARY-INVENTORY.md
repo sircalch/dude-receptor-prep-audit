@@ -12,7 +12,7 @@ the authors' final review.
 | Online Resource 4 | KIF11 pose-recovery records and configuration | `results/kif11_*`, `protocol/kif11_3cjo_vina_reference.conf` | Available |
 | Online Resource 5 | Reproducibility checker and SHA-256 manifest | `scripts/verify_frozen_evidence.py` plus its emitted manifest | Available |
 | Online Resource 6 | RCSB legacy-PDB comparator manifest and target-level output table | `validation/rcsb_legacy_pdb_*_20260809.csv`, `validation/README.md` | Available |
-| Online Resource 7 | Human independent-review record | Signed or dated review log, commit SHA, findings | Pending |
+| Online Resource 7 | Human review checklist and reported review record | `manuscript/JMM-HUMAN-REVIEW-CHECKLIST.md`; `reports/AUTHOR-MANUAL-REVIEW-2026-08-09.md` | Available; final approval of the exact submission files remains pending |
 
 ## Repository and archive citation
 

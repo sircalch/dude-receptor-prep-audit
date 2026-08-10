@@ -5,7 +5,7 @@
 <sup>1</sup> Universidad Estatal de Sonora, Hermosillo, Sonora, Mexico. ORCID: 0009-0009-1207-8597  
 <sup>2</sup> Doctorado en Nanotecnología, Universidad de Sonora, Hermosillo, Sonora, Mexico. ORCID: 0009-0005-0272-0241  
 <sup>3</sup> Doctorado en Ciencia de Materiales, Universidad de Sonora, Hermosillo, Sonora, Mexico. ORCID: 0009-0003-7872-4965  
-\*Corresponding author: andres.monreal@ues.mx
+*Corresponding author: andres.monreal@ues.mx
 
 **Article type proposed:** Software Report
 
@@ -55,6 +55,8 @@ OpenAI Codex (GPT-5) was used as computational assistance during software and do
 
 The original DUD-E PDB condition produced no nonempty PDBQT outputs: all 102 attempts failed, and the retained audit recorded blank PDB element fields in all observed coordinate records. The RCSB mmCIF condition produced 26 direct successes and 76 failures. The RCSB legacy-PDB condition produced 27 direct successes and 75 failures (Table 1; Fig. 1).
 
+**Table 1** Strict direct receptor-preparation outcomes by source-and-reader condition
+
 | Condition | Direct successes | Direct failures | Scope |
 |---|---:|---:|---|
 | Original DUD-E PDB, direct reader | 0/102 | 102/102 | Frozen original receptor representation |
@@ -66,6 +68,8 @@ The RCSB mmCIF and legacy-PDB conditions agreed for 26 joint successes and 75 jo
 ### 3.2 Reference-pose recovery
 
 All nine generated poses were retained for each reference case (Table 2; Fig. 2). For BRAF 3D4Q/SM5, the top-score pose had a mapped heavy-atom RMSD of 1.134 Å and the lowest observed RMSD was 1.083 Å. For KIF11 3CJO/K30, the top-score pose had RMSD 1.477 Å and the lowest observed RMSD was 1.316 Å.
+
+**Table 2** Retained reference-pose recovery outcomes under declared configurations
 
 | Target and ligand | Retained poses | Top-score value (kcal/mol) | RMSD of top-score pose (Å) | Lowest RMSD (Å) | Declared limitation |
 |---|---:|---:|---:|---:|---|
@@ -110,7 +114,7 @@ Sara Lizbeth Franco Amaya: Conceptualization; Writing - review and editing. Carl
 
 ### Data availability
 
-Versioned code, derived non-coordinate result tables, protocols, validation artefacts, and deterministic figures are available from the project repository and its versioned Zenodo archive. Original coordinates and local PDBQT/log files are not redistributed; source identifiers, URLs, and checksums are provided to support retrieval and verification.
+Versioned code, derived non-coordinate result tables, protocols, validation artefacts, and deterministic figures are available from the public project repository. The frozen v0.2.0 evidence archive is available at https://doi.org/10.5281/zenodo.21866318. A new persistent archive containing the comparator and manuscript-source version must be created before submission. Original coordinates and local PDBQT/log files are not redistributed; source identifiers, URLs, and checksums are provided to support retrieval and verification.
 
 ## References
 

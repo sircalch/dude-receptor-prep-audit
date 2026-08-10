@@ -49,12 +49,19 @@ def set_table_geometry(table, widths):
     indent.set(qn("w:type"), "dxa")
     tbl_pr.append(indent)
     for row in table.rows:
+        tr_pr = row._tr.get_or_add_trPr()
+        cannot_split = OxmlElement("w:cantSplit")
+        tr_pr.append(cannot_split)
         for cell, width in zip(row.cells, widths):
             set_cell_width(cell, width)
             cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
             for paragraph in cell.paragraphs:
                 paragraph.paragraph_format.space_after = Pt(0)
                 paragraph.paragraph_format.space_before = Pt(0)
+    header_pr = table.rows[0]._tr.get_or_add_trPr()
+    repeat_header = OxmlElement("w:tblHeader")
+    repeat_header.set(qn("w:val"), "true")
+    header_pr.append(repeat_header)
 
 
 def add_page_number(paragraph):
@@ -142,6 +149,11 @@ def main():
             doc.add_paragraph(clean(line[3:]), style="Heading 1")
         elif line.startswith("### "):
             doc.add_paragraph(clean(line[4:]), style="Heading 2")
+        elif line.startswith("**Table 1**"):
+            doc.add_page_break()
+            paragraph = doc.add_paragraph()
+            run = paragraph.add_run(clean(line))
+            set_font(run, size=10, bold=True)
         elif line.startswith("**") and line.endswith("**"):
             paragraph = doc.add_paragraph()
             run = paragraph.add_run(clean(line))
@@ -154,7 +166,7 @@ def main():
 
     note = doc.add_paragraph()
     note.paragraph_format.space_before = Pt(8)
-    run = note.add_run("Figure files for separate upload: reports/figures/figure-6-preparation-comparator.svg and reports/figures/figure-5-braf-sm5-pose-recovery.svg.")
+    run = note.add_run("Figure files for separate upload: reports/figures/figure-6-preparation-comparator.svg and reports/figures/figure-7-reference-pose-panel.svg.")
     set_font(run, size=9)
     doc.core_properties.title = "A provenance-aware workflow for strict receptor-preparation audits and reference-pose recovery in molecular docking"
     doc.core_properties.author = "Andrés Monreal Hernández; Sara Lizbeth Franco Amaya; Carlos Ivanhoe Martínez Osorio"
