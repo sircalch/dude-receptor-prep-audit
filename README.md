@@ -45,6 +45,8 @@ The selected KIF11 cofactor-retaining reference protocol is in
 [protocol/KIF11-3CJO-REFERENCE-LIGAND-QUALIFICATION.md](protocol/KIF11-3CJO-REFERENCE-LIGAND-QUALIFICATION.md).
 The completed two-target comparison is in
 [reports/REFERENCE-POSE-RECOVERY-PANEL.md](reports/REFERENCE-POSE-RECOVERY-PANEL.md).
+An evidence-bounded manuscript base and submission checklist are in
+[manuscript/](manuscript/).
 
 ## Reproduction
 
