@@ -29,18 +29,38 @@ def main() -> None:
     parser.add_argument("--limit", type=int)
     parser.add_argument("--start-index", type=int, default=0)
     parser.add_argument("--timeout-seconds", type=int, default=300)
+    parser.add_argument(
+        "--checkpoint-every",
+        type=int,
+        default=0,
+        help="write completed rows every N attempts; 0 writes only at completion",
+    )
     args = parser.parse_args()
+    if args.checkpoint_every < 0:
+        raise ValueError("--checkpoint-every must be zero or a positive integer")
     with args.registry_csv.open(newline="", encoding="utf-8") as handle: records = list(csv.DictReader(handle))
     if len(records) != 102: raise RuntimeError("The frozen registry must contain exactly 102 targets.")
     records = records[args.start_index:]
     if args.limit is not None: records = records[:args.limit]
     rows = []
+
+    fields = ["target", "pdb_id", "mmcif_sha256", "outcome", "return_code", "pdbqt_bytes", "error_class"]
+    def write_rows() -> None:
+        args.results_csv.parent.mkdir(parents=True, exist_ok=True)
+        with args.results_csv.open("w", newline="", encoding="utf-8") as handle:
+            writer = csv.DictWriter(handle, fieldnames=fields)
+            writer.writeheader()
+            writer.writerows(rows)
+
     for record in records:
         target, pdb_id = record["target"].lower(), record["pdb_id"].lower()
         source = args.mmcif_dir / f"{pdb_id}.cif"
         common = {"target": target, "pdb_id": pdb_id, "mmcif_sha256": "", "outcome": "", "return_code": "", "pdbqt_bytes": 0, "error_class": ""}
         if not source.exists():
-            rows.append({**common, "outcome": "source_missing", "error_class": "FileNotFoundError"}); continue
+            rows.append({**common, "outcome": "source_missing", "error_class": "FileNotFoundError"})
+            if args.checkpoint_every and len(rows) % args.checkpoint_every == 0:
+                write_rows()
+            continue
         common["mmcif_sha256"] = sha256(source)
         output_dir = args.work_dir / target; output_dir.mkdir(parents=True, exist_ok=True)
         output_base = output_dir / "receptor"; pdbqt = Path(f"{output_base}.pdbqt")
@@ -51,8 +71,7 @@ def main() -> None:
             rows.append({**common, "outcome": "direct_success" if success else "direct_failure", "return_code": run.returncode, "pdbqt_bytes": pdbqt.stat().st_size if pdbqt.exists() else 0, "error_class": "" if success else classify(log)})
         except subprocess.TimeoutExpired:
             rows.append({**common, "outcome": "direct_failure", "return_code": "timeout", "error_class": "preparation_timeout"})
-    fields = ["target", "pdb_id", "mmcif_sha256", "outcome", "return_code", "pdbqt_bytes", "error_class"]
-    args.results_csv.parent.mkdir(parents=True, exist_ok=True)
-    with args.results_csv.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields); writer.writeheader(); writer.writerows(rows)
+        if args.checkpoint_every and len(rows) % args.checkpoint_every == 0:
+            write_rows()
+    write_rows()
 if __name__ == "__main__": main()
