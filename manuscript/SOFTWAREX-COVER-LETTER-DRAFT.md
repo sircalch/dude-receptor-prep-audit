@@ -30,10 +30,10 @@ submission to *SoftwareX*, and accept responsibility for the work. The authors
 declare no competing interests and report no external funding.
 
 In line with the publisher's policy, the manuscript transparently discloses
-the use of OpenAI Codex (GPT-5) for code assistance, documentation
-organization, drafting support, and literature-discovery assistance. The human
-authors reviewed and verified the computational work, figures, references, and
-final manuscript, and remain fully responsible for the content.
+the use of OpenAI Codex (GPT-5) as assistance for software and document
+organization. The human authors reviewed and verified the computational work,
+figures, references, and final manuscript, and remain fully responsible for
+the content.
 
 Thank you for your consideration.
 
@@ -46,4 +46,3 @@ Corresponding author
 Doctorado en Nanotecnología, Universidad de Sonora, México
 
 andres.monreal@ues.mx
-

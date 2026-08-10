@@ -1,7 +1,10 @@
 # SoftwareX: assessment and submission-readiness record
 
-**Status:** pre-submission assessment only. This file is not a submission and
-does not imply acceptance, payment, or a decision by SoftwareX.
+**Status:** not a SoftwareX submission. This file is not a submission and does
+not imply acceptance, payment, or a decision by SoftwareX. SoftwareX currently
+lists an APC of USD 1,460 excluding tax; because the authors do not intend to
+pay an APC, SoftwareX is not an active target unless the journal confirms a
+full waiver before submission.
 
 ## Why SoftwareX is a plausible candidate
 
@@ -64,9 +67,9 @@ recovery examples, with all poses and methodological limitations reported.
 2. Decide whether to pursue SoftwareX after reviewing its article-processing
    charge and any applicable waiver route. No fee should be incurred without
    explicit author approval.
-3. Download the current official SoftwareX article template immediately before
-   formatting, because journal templates and submission instructions can
-   change.
+3. Use the current official SoftwareX article template only if the journal
+   confirms a full waiver before submission, because templates and instructions
+   can change.
 4. Conduct a human, line-by-line review of the final manuscript, figures,
    captions, references, code availability, and AI disclosure.
 5. Submit only the final author-approved files through the journal portal.
@@ -91,4 +94,3 @@ recovery examples, with all poses and methodological limitations reported.
   https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals
 - Elsevier, *Pricing and funding options*:
   https://www.elsevier.com/about/policies-and-standards/pricing
-

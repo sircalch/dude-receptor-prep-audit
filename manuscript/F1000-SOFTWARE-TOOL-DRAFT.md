@@ -121,12 +121,11 @@ computing resources.
 
 ## Declaration of generative AI and AI-assisted technologies
 
-During development and preparation of this manuscript, the authors used OpenAI
-Codex (GPT-5) for code assistance, documentation organization, drafting support,
-and literature-discovery assistance. All scientific decisions, computational
-executions, result checks, reference verification, figures, and manuscript
-content were reviewed and approved by the human authors, who take full
-responsibility for the work.
+During development of this work and preparation of the manuscript, the authors
+used OpenAI Codex (GPT-5) as assistance for software and document organization.
+The authors reviewed and edited the resulting material and take full
+responsibility for the scientific decisions, computational work, references,
+figures, and final content.
 
 ## References
 
