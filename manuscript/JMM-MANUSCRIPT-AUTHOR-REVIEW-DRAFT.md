@@ -128,4 +128,4 @@ Sara Lizbeth Franco Amaya: Conceptualization; Writing - review and editing. Carl
 
 ### Data availability
 
-Versioned code, derived non-coordinate result tables, protocols, validation artefacts, and deterministic figures are available from the public project repository. The frozen v0.2.0 evidence archive is available at https://doi.org/10.5281/zenodo.21866318. A new persistent archive containing the comparator and manuscript-source version must be created before submission. Original coordinates and local PDBQT/log files are not redistributed; source identifiers, URLs, and checksums are provided to support retrieval and verification.
+Versioned code, derived non-coordinate result tables, protocols, validation artefacts, and deterministic figures are available from the public project repository. Supporting non-coordinate derived tables, protocols, and verification scripts are supplied as Online Resource 1. The frozen v0.2.0 evidence archive is available at https://doi.org/10.5281/zenodo.21866318. Original coordinates and local PDBQT/log files are not redistributed; source identifiers, URLs, and checksums are provided to support retrieval and verification.
