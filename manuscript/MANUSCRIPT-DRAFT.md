@@ -2,8 +2,9 @@
 
 Andrés Monreal Hernández¹*, Sara Lizbeth Franco Amaya¹, Carlos Ivanhoe Martínez Osorio²
 
-¹ Doctorado en Nanotecnología, Universidad de Sonora, México  
-² Doctorado en Ciencia de Materiales, Universidad de Sonora, México  
+¹ Doctorado en Nanotecnología, Universidad de Sonora, México
+
+² Doctorado en Ciencia de Materiales, Universidad de Sonora, México
 * Corresponding author: andres.monreal@ues.mx
 
 ## Abstract
@@ -99,8 +100,9 @@ tool logs are excluded from version control but represented by checksums.
 
 ## Declarations
 
-Funding: This work used the authors' available local computing resources.  
-Conflicts of interest: The authors declare no conflicts of interest.  
+Funding: This work used the authors' available local computing resources.
+
+Conflicts of interest: The authors declare no conflicts of interest.
 Author contributions: To be finalized and confirmed by all authors before submission.
 
 ## References to complete before submission
