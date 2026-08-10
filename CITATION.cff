@@ -2,9 +2,12 @@ cff-version: 1.2.0
 message: "If you use this audit, please cite it using the metadata below."
 title: "DUD-E receptor-preparation compatibility audit"
 version: 0.2.0
-date-released: 2026-08-09
+date-released: 2026-08-10
 license: MIT
 repository-code: "https://github.com/sircalch/dude-receptor-prep-audit"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21866318"
 authors:
   - family-names: "Monreal Hernández"
     given-names: "Andrés"
