@@ -148,10 +148,13 @@ audit and reference-pose recovery workflow.
    alternative, with denominators shown.
 3. **Figure 3:** BRAF and KIF11 reference-pose recovery panel, displaying all
    poses or an accessible summary linked to the full table.
-4. **Table 1:** Reproducibility manifest: software, versions, configurations,
+4. **Figure 4:** Strict preparation comparison across original DUD-E PDB,
+   RCSB mmCIF, and RCSB legacy-PDB conditions, with all denominators shown.
+5. **Table 1:** Reproducibility manifest: software, versions, configurations,
    seeds, input IDs, result files, and checksums.
-5. **Table 2:** Target-level audit outcomes and exclusions.
-6. **Table 3:** Reference-pose results, including top-score and lowest-RMSD
+6. **Table 2:** Target-level audit outcomes and exclusions, including the
+   separate legacy-PDB comparator condition.
+7. **Table 3:** Reference-pose results, including top-score and lowest-RMSD
    values without conflating the selection rules.
 
 ## Editorial and integrity gates

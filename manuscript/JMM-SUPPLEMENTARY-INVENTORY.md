@@ -11,7 +11,7 @@ the authors' final review.
 | Online Resource 3 | BRAF pose-recovery records and configuration | `results/braf_*`, `protocol/braf_3d4q_vina_reference.conf` | Available |
 | Online Resource 4 | KIF11 pose-recovery records and configuration | `results/kif11_*`, `protocol/kif11_3cjo_vina_reference.conf` | Available |
 | Online Resource 5 | Reproducibility checker and SHA-256 manifest | `scripts/verify_frozen_evidence.py` plus its emitted manifest | Available |
-| Online Resource 6 | Comparator validation logs and output tables | New files produced under `validation/` | Pending; do not fabricate |
+| Online Resource 6 | RCSB legacy-PDB comparator manifest and target-level output table | `validation/rcsb_legacy_pdb_*_20260809.csv`, `validation/README.md` | Available |
 | Online Resource 7 | Human independent-review record | Signed or dated review log, commit SHA, findings | Pending |
 
 ## Repository and archive citation
