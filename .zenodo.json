@@ -1,0 +1,17 @@
+{
+  "title": "DUD-E receptor-preparation compatibility audit",
+  "description": "Open, reproducible audit of strict DUD-E receptor preparation with declared Meeko workflows, authoritative mmCIF qualification, and two explicitly bounded reference-pose recovery campaigns (BRAF/SM5 and KIF11/K30). This software and evidence package does not claim affinity, biological activity, or therapeutic effect.",
+  "creators": [
+    {"name": "Monreal Hernández, Andrés", "orcid": "0009-0009-1207-8597", "affiliation": "Universidad de Sonora"},
+    {"name": "Franco Amaya, Sara Lizbeth", "orcid": "0009-0005-0272-0241", "affiliation": "Universidad de Sonora"},
+    {"name": "Martínez Osorio, Carlos Ivanhoe", "orcid": "0009-0003-7872-4965", "affiliation": "Universidad de Sonora"}
+  ],
+  "keywords": ["molecular docking", "reproducibility", "receptor preparation", "Meeko", "AutoDock Vina", "DUD-E"],
+  "license": "MIT",
+  "access_right": "open",
+  "upload_type": "software",
+  "version": "0.2.0",
+  "related_identifiers": [
+    {"identifier": "https://github.com/sircalch/dude-receptor-prep-audit", "relation": "isSupplementTo", "resource_type": "software"}
+  ]
+}
