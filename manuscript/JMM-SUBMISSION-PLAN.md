@@ -36,10 +36,11 @@ binding affinity, biological activity, safety, or therapeutic effect.
    with a predeclared runtime-measurement protocol. Preserve the frozen v0.2.0
    table; a non-identical rerun is a reported result, not a reason to
    overwrite it.
-2. Define one or more legitimate comparator preparation workflows and document
-   their exact versions, commands, inputs, exclusions, and output criteria.
-   No comparison may be introduced merely to improve a result.
-3. Predefine success/failure criteria for every comparator and retain failures.
+2. Completed: define and execute the RCSB legacy-PDB direct-reader comparator
+   with recorded source manifests, commands, inputs, output criteria, and all
+   outcomes; see `reports/RCSB-LEGACY-PDB-COMPARATOR-2026-08-09.md`.
+3. Completed for the selected comparator: predefine success/failure criteria
+   and retain failures. No comparison was introduced to improve a result.
 4. Repeat the BRAF and KIF11 reference-pose campaigns under the declared
    configuration, preserving all output poses and seeds.
 5. Add a target-stratified summary of the 102-attempt audit, including the

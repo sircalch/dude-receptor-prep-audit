@@ -13,7 +13,7 @@ would require interpretation. It is not submission prose. Every row marked
 | KIF11 reference-pose case | For 3CJO/K30, nine Vina poses were generated; top-score RMSD was 1.477 Å and lowest RMSD was 1.316 Å. | `results/kif11_k30_reference_pose_recovery.csv` | Ready: byte-identical independent campaign recorded in `reports/INDEPENDENT-REFERENCE-POSE-REPRODUCTION-2026-08-09.md`. | Preserve the retained ADP/Mg policy and the recorded Meeko limitation. |
 | Execution environment | The historical mmCIF run used Windows, Python 3.13.5, Meeko 0.7.1, RDKit 2026.3.5, and ProDy 2.6.1. | `protocol/JMM-ENVIRONMENT-MANIFEST.md` | Ready as an environment record. | This records provenance; it does not establish portability across all platforms. |
 | Reproducibility controls | Frozen checksums, deterministic figure renderers, fixed Vina configurations, and verification scripts are available. | `scripts/verify_frozen_evidence.py`, `protocol/`, `reports/` | Ready for the direct audit and both pose cases. | A clean-environment full rerun and comparator study remain separate gates. |
-| Comparator preparation workflow | No comparison result exists yet. | `protocol/JMM-VALIDATION-PROTOCOL.md` | Pending. | Do not describe a comparator as performed until its protocol and outputs are frozen and independently checked. |
+| Comparator preparation workflow | Official RCSB legacy-PDB direct preparation: 27/102 successes; 101/102 target outcomes agree with the frozen mmCIF condition. | `reports/RCSB-LEGACY-PDB-COMPARATOR-2026-08-09.md` | Completed as a local, checksummed comparison; independent review remains pending. | Source-and-reader compatibility only; do not claim format equivalence or a gold standard. |
 
 ## Sources-to-claim map
 
