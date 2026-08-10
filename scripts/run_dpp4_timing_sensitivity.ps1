@@ -1,7 +1,7 @@
 param(
     [Parameter(Mandatory = $true)][string]$Python,
     [Parameter(Mandatory = $true)][string]$MeekoCommand,
-    [string]$OutputRoot = "audit-output/dpp4-2i78-timing-sensitivity-20260809"
+    [string]$OutputRoot = "audit-output/dpp4-2i78-timing-sensitivity-20260809-run2"
 )
 
 $ErrorActionPreference = "Stop"
@@ -9,7 +9,8 @@ $repository = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $output = Join-Path $repository $OutputRoot
 New-Item -ItemType Directory -Force -Path $output | Out-Null
 
-$source = Join-Path $repository "data/rcsb_mmcif/2i78.cif"
+$mmcifDirectory = Join-Path $repository "external-data/rcsb-mmcif"
+$source = Join-Path $mmcifDirectory "2i78.cif"
 $sourceHash = (Get-FileHash -LiteralPath $source -Algorithm SHA256).Hash.ToLowerInvariant()
 $records = @()
 
@@ -22,7 +23,7 @@ for ($attempt = 1; $attempt -le 3; $attempt++) {
     $stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
     & $Python (Join-Path $repository "scripts/audit_rcsb_mmcif_preparation.py") `
         (Join-Path $repository "data/dude_targets.csv") `
-        (Join-Path $repository "data/rcsb_mmcif") `
+        $mmcifDirectory `
         $work `
         $csv `
         --meeko-command $MeekoCommand `

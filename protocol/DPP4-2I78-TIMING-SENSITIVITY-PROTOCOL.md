@@ -16,7 +16,8 @@ execution-time sensitivity; it does not alter the frozen audit table.
 ## Locked inputs and conditions
 
 - Registry row: index 26 of `data/dude_targets.csv` (`DPP4`, `2I78`).
-- Coordinate input: existing frozen `data/rcsb_mmcif/2i78.cif`; record its
+- Coordinate input: existing archived `external-data/rcsb-mmcif/2i78.cif`;
+  record its
   SHA-256 before execution.
 - Preparation command: the historical `mk_prepare_receptor.exe` through
   `scripts/audit_rcsb_mmcif_preparation.py` with `--read_with_prody`.
