@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.13'
       - name: Compile audit scripts
-        run: python -m py_compile scripts/fetch_dude_registry.py scripts/audit_dude_receptors.py scripts/render_audit_figures.py scripts/qualify_rcsb_element_mapping.py scripts/render_mapping_figure.py scripts/audit_rcsb_mmcif_preparation.py scripts/merge_rcsb_chunks.py scripts/render_mmcif_figure.py scripts/extract_braf_reference_metadata.py scripts/qualify_braf_sm5_component.py scripts/extract_braf_sm5_reference_instance.py scripts/prepare_braf_chain_a_receptor.py
+        run: python -m py_compile scripts/fetch_dude_registry.py scripts/audit_dude_receptors.py scripts/render_audit_figures.py scripts/qualify_rcsb_element_mapping.py scripts/render_mapping_figure.py scripts/audit_rcsb_mmcif_preparation.py scripts/merge_rcsb_chunks.py scripts/render_mmcif_figure.py scripts/extract_braf_reference_metadata.py scripts/qualify_braf_sm5_component.py scripts/extract_braf_sm5_reference_instance.py scripts/prepare_braf_chain_a_receptor.py scripts/prepare_braf_sm5_reference_ligand.py scripts/analyze_braf_sm5_pose_recovery.py scripts/summarize_braf_sm5_reference_run.py
       - name: Validate table and regenerate deterministic figures
         run: |
           python scripts/render_audit_figures.py
@@ -35,4 +35,7 @@ jobs:
           test -s results/braf_chain_a_receptor_preparation.csv
           test -s protocol/braf_3d4q_vina_reference.conf
           test -s results/braf_3d4q_vina_reference_configuration.csv
+          test -s results/braf_sm5_reference_ligand_preparation.csv
+          test -s results/braf_sm5_reference_pose_recovery.csv
+          test -s results/braf_sm5_reference_run.csv
           git diff --exit-code -- reports/figures

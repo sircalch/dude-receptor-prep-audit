@@ -96,7 +96,29 @@ scoring function (`vina`), CPU count (1), seed (20260809), exhaustiveness
 (3.0 kcal/mol), and the predeclared ligand-derived box. The matching flat
 record is [`results/braf_3d4q_vina_reference_configuration.csv`](../results/braf_3d4q_vina_reference_configuration.csv).
 
-This configuration is an execution plan only. No Vina command has been run.
+At the time this configuration was frozen, no Vina command had been run.
+
+## Completed Gate 5: single reference-pose recovery run
+
+The SM5 ideal SDF from RCSB was checked against the frozen component definition
+(51 atoms, 28 heavy atoms, 55 bonds, charge 0) and prepared with Meeko 0.7.1,
+Gasteiger charges, and an index map. Its provenance and output checksum are in
+[`results/braf_sm5_reference_ligand_preparation.csv`](../results/braf_sm5_reference_ligand_preparation.csv).
+
+One, and only one, AutoDock Vina command was then run with the frozen
+configuration. It generated nine poses. The top-scoring pose had Vina score
+−10.929 kcal/mol and mapped, aligned heavy-atom RMSD 1.134 Å against deposited
+SM5-A. The lowest RMSD among the nine was 1.083 Å (model 3, score −9.978
+kcal/mol). Every pose used all 28 mappable heavy atoms; the complete values
+are in [`results/braf_sm5_reference_pose_recovery.csv`](../results/braf_sm5_reference_pose_recovery.csv)
+and hashes and aggregate facts are in
+[`results/braf_sm5_reference_run.csv`](../results/braf_sm5_reference_run.csv).
+
+No binary RMSD acceptance threshold was declared before this run. Therefore
+these are reported as numerical pose-recovery observations, not retrospectively
+classified as a "pass". A Vina score is not an experimental affinity, and this
+single reference calculation does not demonstrate selectivity, activity,
+efficacy, safety, or any cancer-related effect.
 
 ## Gates before any reference-pose calculation
 
@@ -115,11 +137,11 @@ All of the following must be recorded before running a docking engine:
 4. ~~Freeze a docking engine/version, seed, exhaustiveness, energy range,
    number of modes, box, and RMSD comparison rule before execution.~~ Completed
    as documented above.
-5. Prepare only SM5 from the frozen component baseline, run it against its
-   matched receptor, and report pose recovery as
-   heavy-atom RMSD after a declared atom mapping, with all poses and failures
-   retained.  A successful recovery would validate only this narrow
-   computational setup, not affinity or biological activity.
+5. ~~Prepare only SM5 from the frozen component baseline, run it against its
+   matched receptor, and report pose recovery as heavy-atom RMSD after a
+   declared atom mapping, with all poses and failures retained.~~ Completed as
+   documented above. This narrow observation does not establish affinity or
+   biological activity.
 
 Any failure at a gate stops the campaign for diagnosis; it must not be hidden
 by a repair, manual coordinate adjustment, or selective rerun.

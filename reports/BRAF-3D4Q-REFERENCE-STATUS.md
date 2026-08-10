@@ -30,13 +30,19 @@ and summarized in
 
 ## What is deliberately not yet claimed
 
-There are no ligand-preparation outputs, docking runs, recovered poses, RMSD
-values, docking scores, ranking results, affinity estimates, or cancer-related
-efficacy claims.  Consequently, no validation result exists yet.
+The single, predeclared SM5 reference run is complete. Its pose-recovery table
+contains all nine Vina poses and identity-mapped, aligned heavy-atom RMSD
+values. The top-scoring pose was −10.929 kcal/mol with RMSD 1.134 Å; the lowest
+RMSD observed was 1.083 Å for model 3. No pass/fail threshold was declared in
+advance, so these are numerical observations rather than a binary validation
+claim.
+
+There are no library screens, ranking results beyond this reference ligand,
+experimental affinity estimates, or cancer-related efficacy claims.
 
 ## Next auditable action
 
-The next action is Gate 5 in the
-[qualification protocol](../protocol/BRAF-3D4Q-REFERENCE-LIGAND-QUALIFICATION.md):
-prepare the frozen SM5 baseline and run the one predeclared recovery calculation. Only
-after the listed gates are complete may a reference-pose calculation be run.
+The defined reference-pose campaign is complete. Any extension (an independent
+repeat, protonation sensitivity analysis, additional targets, or a screened
+compound set) requires a separate pre-specified protocol rather than altering
+this record.
