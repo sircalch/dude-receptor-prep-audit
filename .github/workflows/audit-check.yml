@@ -18,6 +18,7 @@ jobs:
         run: python -m py_compile scripts/*.py
       - name: Validate table and regenerate deterministic figures
         run: |
+          python scripts/verify_frozen_evidence.py
           python scripts/render_audit_figures.py
           python scripts/render_mapping_figure.py
           python scripts/render_mmcif_figure.py

@@ -65,6 +65,29 @@ An evidence-bounded manuscript base and submission checklist are in
 The script can be resumed safely. Raw coordinates, PDBQT files and logs remain
 local; the results table records checksums and observed statuses.
 
+### Verify the versioned evidence
+
+The repository includes a read-only consistency check for the committed result
+tables. It does not download structures, rerun Meeko, or make any scientific
+inference:
+
+```sh
+python scripts/verify_frozen_evidence.py
+```
+
+It confirms the reported DUD-E and mmCIF denominators, retained mmCIF failure
+classes, reference-pose table consistency, and prints a SHA-256 manifest for
+the machine-readable CSV evidence.
+
+## Manuscript development
+
+The current target is a *Journal of Molecular Modeling* Software Report. The
+editorial plan, pre-registered validation protocol, and proposed supplementary
+inventory are retained in [`manuscript/JMM-SUBMISSION-PLAN.md`](manuscript/JMM-SUBMISSION-PLAN.md),
+[`protocol/JMM-VALIDATION-PROTOCOL.md`](protocol/JMM-VALIDATION-PROTOCOL.md),
+and [`manuscript/JMM-SUPPLEMENTARY-INVENTORY.md`](manuscript/JMM-SUPPLEMENTARY-INVENTORY.md).
+They distinguish available evidence from validation still to be performed.
+
 ## Limits
 
 A successful PDBQT conversion is not validation of a binding pose, docking
